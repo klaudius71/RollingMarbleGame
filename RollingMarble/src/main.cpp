@@ -8,7 +8,7 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 	UNREFERENCED_PARAMETER(lpCmdLine);
 	UNREFERENCED_PARAMETER(nShowCmd);
 
-#ifdef _SHOW_CONSOLE
+#ifdef _CONSOLE
 	AllocConsole();
 	FILE* fpstdin = stdin, * fpstdout = stdout, * fpstderr = stderr;
 	freopen_s(&fpstdin, "CONIN$", "r", stdin);

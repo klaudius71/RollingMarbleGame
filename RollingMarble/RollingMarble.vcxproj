@@ -15,11 +15,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Level1.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\RollingMarble.cpp" />
+    <ClCompile Include="src\TestScript.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Level1.h" />
     <ClInclude Include="src\RollingMarble.h" />
+    <ClInclude Include="src\TestScript.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

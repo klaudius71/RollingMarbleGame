@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+
+# Visual Studio
+
+/.vs
+/bin
+/bin-int
+/RollingMarble/bin
+/RollingMarble/bin-int
+/RollingMarble/build

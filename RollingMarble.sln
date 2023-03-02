@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RollingMarble", "RollingMarble\RollingMarble.vcxproj", "{146C534F-553C-4B93-B450-738664C3B9F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{146C534F-553C-4B93-B450-738664C3B9F2}.Debug|x64.ActiveCfg = Debug|x64
+		{146C534F-553C-4B93-B450-738664C3B9F2}.Debug|x64.Build.0 = Debug|x64
+		{146C534F-553C-4B93-B450-738664C3B9F2}.Release|x64.ActiveCfg = Release|x64
+		{146C534F-553C-4B93-B450-738664C3B9F2}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {590E9346-5FFE-40D9-940C-0780FB8299C6}
+	EndGlobalSection
+EndGlobal

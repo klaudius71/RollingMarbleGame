@@ -17,11 +17,16 @@
   <ItemGroup>
     <ClCompile Include="src\Level1.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MarbleControllerScript.cpp" />
+    <ClCompile Include="src\OrbitCameraScript.cpp" />
     <ClCompile Include="src\RollingMarble.cpp" />
     <ClCompile Include="src\TestScript.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\MarblePrefab.h" />
     <ClInclude Include="src\Level1.h" />
+    <ClInclude Include="src\MarbleControllerScript.h" />
+    <ClInclude Include="src\OrbitCameraScript.h" />
     <ClInclude Include="src\RollingMarble.h" />
     <ClInclude Include="src\TestScript.h" />
   </ItemGroup>
@@ -88,7 +93,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)GlacierV2\src;$(SolutionDir)GlacierV2\external\glm-0.9.9.8;$(SolutionDir)GlacierV2\external\entt-3.10.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4251; 4201</DisableSpecificWarnings>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -112,7 +117,7 @@ xcopy /y /d "$(SolutionDir)GlacierV2\bin\$(Platform)\$(Configuration)\GlacierV2\
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)GlacierV2\src;$(SolutionDir)GlacierV2\external\glm-0.9.9.8;$(SolutionDir)GlacierV2\external\entt-3.10.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4251; 4201</DisableSpecificWarnings>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -137,7 +142,7 @@ xcopy /y /d "$(SolutionDir)GlacierV2\bin\$(Platform)\$(Configuration)\GlacierV2\
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)GlacierV2\src;$(SolutionDir)GlacierV2\external\glm-0.9.9.8;$(SolutionDir)GlacierV2\external\entt-3.10.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4251; 4201</DisableSpecificWarnings>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>

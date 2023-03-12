@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Scripts">
       <UniqueIdentifier>{2bcc339a-fead-4984-adb9-e6b5525260da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Prefabs">
+      <UniqueIdentifier>{0d8af366-c0c4-4469-84b9-197e6c17e7ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -33,6 +36,12 @@
     <ClCompile Include="src\TestScript.cpp">
       <Filter>Source Files\Scripts</Filter>
     </ClCompile>
+    <ClCompile Include="src\MarbleControllerScript.cpp">
+      <Filter>Source Files\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OrbitCameraScript.cpp">
+      <Filter>Source Files\Scripts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\RollingMarble.h">
@@ -42,6 +51,15 @@
       <Filter>Source Files\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="src\TestScript.h">
+      <Filter>Source Files\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MarblePrefab.h">
+      <Filter>Source Files\Prefabs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MarbleControllerScript.h">
+      <Filter>Source Files\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OrbitCameraScript.h">
       <Filter>Source Files\Scripts</Filter>
     </ClInclude>
   </ItemGroup>

@@ -18,7 +18,8 @@ public:
 		marble->AddScript<MarbleControllerScript>();
 
 		GameObject camera = scn.CreateGameObject("Camera", marble);
-		camera->EmplaceComponent<CameraComponent>();
+		const glm::ivec2& screen_size = Renderer::GetMainFramebuffer().GetSize();
+		camera->EmplaceComponent<CameraComponent>(glm::perspective(glm::radians(90.0f), (float)screen_size.x / screen_size.y, 0.1f, 10000.0f));
 		camera->AddScript<OrbitCameraScript>();
 		camera->RegisterToScene();
 

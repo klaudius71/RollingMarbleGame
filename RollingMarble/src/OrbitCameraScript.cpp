@@ -48,3 +48,8 @@ void OrbitCameraScript::OnUpdate(float dt)
 	camera.cam_pos = marble_transform.GetWorldPosition() - camera_offset;
 	camera.cam_dir = glm::normalize(marble_transform.GetWorldPosition() - camera.cam_pos);
 }
+
+void OrbitCameraScript::OnScreenResize(int width, int height)
+{
+	CameraComponent::ResetProjectionToSize(GetGameObject()->GetComponent<CameraComponent>(), width, height);
+}

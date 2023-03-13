@@ -11,6 +11,7 @@ public:
 
 	virtual void OnSceneEnter() override;
 	virtual void OnUpdate(float dt) override;
+	virtual void OnScreenResize(int width, int height) override;
 
 private:
 	float CAM_RADIUS = 65.0f;

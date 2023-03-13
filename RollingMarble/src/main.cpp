@@ -16,7 +16,7 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 	freopen_s(&fpstderr, "CONOUT$", "w", stderr);
 #endif
 
-	RollingMarble* rollingMarble = new RollingMarble(1920, 1080);
+	RollingMarble* rollingMarble = new RollingMarble(1600, 900);
 	rollingMarble->Run();
 	delete rollingMarble;
 	return 0;

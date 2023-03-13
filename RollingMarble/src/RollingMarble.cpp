@@ -4,6 +4,7 @@
 RollingMarble::RollingMarble(const int window_width, const int window_height, const char* const icon_path)
 	: Glacier::Application(window_width, window_height, icon_path)
 {
+	GetWindow().SetWindowTitle("Rolling Marble Game");
 }
 
 void RollingMarble::LoadResources()

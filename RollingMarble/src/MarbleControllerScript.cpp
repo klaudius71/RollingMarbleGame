@@ -40,10 +40,10 @@ void MarbleControllerScript::OnUpdate(float dt)
 		key_pressed = false;
 	}
 
-	const Font& font = FontLoader::Get("CascadiaMono20");
-	const float y_offset = (float)Renderer::GetMainFramebuffer().GetSize().y;
-	Renderer2D::PrintText(font, 10.0f, y_offset - 20.0f, Colors::Black, "FPS: %.f", 1.0f / TimeManager::GetDeltaTime());
-	Renderer2D::PrintText(font, 10.0f, y_offset - 50.0f, Colors::Black, "Movement Controls:");
-	Renderer2D::PrintText(font, 10.0f, y_offset - 80.0f, Colors::Black, "Ball: WASD");
-	Renderer2D::PrintText(font, 10.0f, y_offset - 110.f, Colors::Black, "Camera: RMB + Mouse");
+	//const Font& font = FontLoader::Get("CascadiaMono20");
+	//const float y_offset = (float)Renderer::GetMainFramebuffer().GetSize().y;
+	//Renderer2D::PrintText(font, 10.0f, y_offset - 20.0f, Colors::Black, "FPS: %.f", 1.0f / TimeManager::GetDeltaTime());
+	//Renderer2D::PrintText(font, 10.0f, y_offset - 50.0f, Colors::Black, "Movement Controls:");
+	//Renderer2D::PrintText(font, 10.0f, y_offset - 80.0f, Colors::Black, "Ball: WASD");
+	//Renderer2D::PrintText(font, 10.0f, y_offset - 110.f, Colors::Black, "Camera: RMB + Mouse");
 }

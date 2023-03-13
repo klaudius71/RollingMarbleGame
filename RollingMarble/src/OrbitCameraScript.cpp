@@ -1,7 +1,7 @@
 #include "OrbitCameraScript.h"
 
 OrbitCameraScript::OrbitCameraScript()
-	: Script("OrbitCameraScript")
+	: Script("OrbitCameraScript"), CAM_RADIUS(65.0f), cam_rotation_euler{ glm::radians(-40.0f), 0.0f, 0.0f }
 {
 }
 
@@ -30,11 +30,15 @@ void OrbitCameraScript::OnUpdate(float dt)
 		else if (Input::GetKeyDown(GLACIER_KEY::KEY_ARROW_RIGHT))
 			cam_rotation_euler.y -= dt * 2.0f;
 	}
+	if (Input::GetKeyDown(GLACIER_KEY::KEY_KP_ADD))
+		CAM_RADIUS -= dt * 20.0f;
+	else if(Input::GetKeyDown(GLACIER_KEY::KEY_KP_SUBTRACT))
+		CAM_RADIUS += dt * 20.0f;
 
 	// Camera Clamping
-	if (glm::degrees(cam_rotation_euler.x) < -80.0f)
+	if (cam_rotation_euler.x < glm::radians(-80.0f))
 		cam_rotation_euler.x = glm::radians(-80.0f);
-	else if (glm::degrees(cam_rotation_euler.x) > 7.5f)
+	else if (cam_rotation_euler.x > glm::radians(7.5f))
 		cam_rotation_euler.x = glm::radians(7.5f);
 
 	const TransformComponent& marble_transform = marble->GetComponent<TransformComponent>();

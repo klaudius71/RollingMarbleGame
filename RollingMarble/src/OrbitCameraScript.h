@@ -13,10 +13,10 @@ public:
 	virtual void OnUpdate(float dt) override;
 
 private:
-	const float CAM_RADIUS = 65.0f;
+	float CAM_RADIUS = 65.0f;
 
 	GameObject marble;
-	glm::vec3 cam_rotation_euler{ 0.0f, 0.0f, 0.0f };
+	glm::vec3 cam_rotation_euler;
 };
 
 #endif

@@ -155,7 +155,7 @@ xcopy /y /d "$(SolutionDir)GlacierV2\bin\$(Platform)\$(Configuration)\GlacierV2\
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y /d "$(SolutionDir)GlacierV2\bin\$(Platform)\Release\GlacierV2\GlacierV2.dll" "$(OutDir)"
-xcopy /y /d /i /s "$(SolutionDir)GlacierV2\assets" "$(OutDir)assets"</Command>
+xcopy /y /d /i /s "$(SolutionDir)\assets" "$(OutDir)assets"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

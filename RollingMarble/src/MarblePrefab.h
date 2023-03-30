@@ -14,7 +14,7 @@ public:
 		marble->EmplaceComponent<MeshComponent>(ModelLoader::Get("Sphere"));
 		marble->EmplaceComponent<MaterialComponent>(VertexTypes::PhongADS(), TextureLoader::Get("Wood")).norm_tex_id.x = TextureLoader::Get("WoodNormal");
 		marble->GetComponent<TransformComponent>().scale() = glm::vec3(10.0f);
-		marble->EmplaceComponent<RigidbodyComponent>(SPHERE_SHAPE, 10.0f);
+		marble->EmplaceComponent<SphereColliderComponent>(10.0f, 50.0f);
 		marble->AddScript<MarbleControllerScript>();
 
 		GameObject camera = scn.CreateGameObject("Camera", marble);

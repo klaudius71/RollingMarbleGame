@@ -9,16 +9,16 @@ void Level1::InitializeScene()
 	light->RegisterToScene();
 
 	GameObject skybox = CreateGameObject("Skybox");
-	skybox->EmplaceComponent<SkyboxComponent>(TextureLoader::GetConst("Sorsele"));
+	skybox->EmplaceComponent<SkyboxComponent>(TextureLoader::Get("Sorsele"));
 	skybox->RegisterToScene();
 
 	GameObject ball = CreatePrefab<MarblePrefab>();
-	ball->GetComponent<RigidbodyComponent>().SetWorldPosition(glm::vec3(0.0f, 50.0f, 0.0f));
+	ball->GetComponent<SphereColliderComponent>().SetWorldPosition(glm::vec3(0.0f, 50.0f, 0.0f));
 	ball->RegisterToScene();
 
 	GameObject plane = CreateGameObject("Plane");
 	plane->EmplaceComponent<MeshComponent>(ModelLoader::Get("Plane"));
-	plane->EmplaceComponent<MaterialComponent>(VertexTypes::PhongADS(), TextureLoader::Get("Tile")).norm_tex_id.x = TextureLoader::GetConst("TileNormal");
-	plane->EmplaceComponent<RigidbodyComponent>(PLANE_SHAPE);
+	plane->EmplaceComponent<MaterialComponent>(VertexTypes::PhongADS(), TextureLoader::Get("Tile")).norm_tex_id.x = TextureLoader::Get("TileNormal");
+	plane->EmplaceComponent<PlaneColliderComponent>(10.0f, 1.0f, 0.9f);
 	plane->RegisterToScene();
 }

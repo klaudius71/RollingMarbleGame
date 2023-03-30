@@ -12,7 +12,7 @@ void MarbleControllerScript::OnSceneEnter()
 }
 void MarbleControllerScript::OnUpdate(float dt)
 {
-	RigidbodyComponent& rigidbody = GetGameObject()->GetComponent<RigidbodyComponent>();
+	SphereColliderComponent& rigidbody = GetGameObject()->GetComponent<SphereColliderComponent>();
 	CameraComponent& cam = camera->GetComponent<CameraComponent>();
 
 	// Movement
@@ -20,20 +20,20 @@ void MarbleControllerScript::OnUpdate(float dt)
 	const glm::vec3 right(glm::cross(fwd, glm::vec3(0.0f, 1.0f, 0.0f)));
 
 	if (Input::GetKeyDown(GLACIER_KEY::KEY_W))
-		rigidbody.ApplyTorqueImpulse(fwd * 5000.0f);
+		rigidbody.ApplyTorqueImpulse(fwd * 500.0f);
 	else if (Input::GetKeyDown(GLACIER_KEY::KEY_S))
-		rigidbody.ApplyTorqueImpulse(fwd * -5000.0f);
+		rigidbody.ApplyTorqueImpulse(fwd * -500.0f);
 	if (Input::GetKeyDown(GLACIER_KEY::KEY_A))
-		rigidbody.ApplyTorqueImpulse(right * -5000.0f);
+		rigidbody.ApplyTorqueImpulse(right * -500.0f);
 	else if (Input::GetKeyDown(GLACIER_KEY::KEY_D))
-		rigidbody.ApplyTorqueImpulse(right * 5000.0f);
+		rigidbody.ApplyTorqueImpulse(right * 500.0f);
 
 	static bool key_pressed = false;
 	bool space_down = Input::GetKeyDown(GLACIER_KEY::KEY_SPACE);
 	if (space_down && !key_pressed)
 	{
 		key_pressed = true;
-		rigidbody.ApplyCentralImpulse(glm::vec3(0.0f, 50000.0f, 0.0f));
+		rigidbody.ApplyCentralImpulse(glm::vec3(0.0f, 5000.0f, 0.0f));
 	}
 	else if (!space_down)
 	{
